@@ -11,8 +11,6 @@ using namespace std;
 
 // Constants
 const int NUMBER_OF_COLORS = 10;
-const int MIN_COLOR_VALUE = 0;
-const int MAX_COLOR_VALUE = 255;
 
 // Main function
 int main()
@@ -30,9 +28,9 @@ int main()
         Color temp;
 
         // Set the values via the mutators
-        temp.setRed(rand() % MAX_COLOR_VALUE + 1);        // Randomize a red value
-        temp.setGreen(rand() % MAX_COLOR_VALUE + 1);      // Randomize a green value
-        temp.setBlue(rand() % MAX_COLOR_VALUE + 1);       // Randomize a blue value
+        temp.setRed(rand() % (Color::MAX_RGB + 1));        // Randomize a red value
+        temp.setGreen(rand() % (Color::MAX_RGB + 1));      // Randomize a green value
+        temp.setBlue(rand() % (Color::MAX_RGB + 1));       // Randomize a blue value
 
         // Push the object into the vector
         colors.push_back(temp);

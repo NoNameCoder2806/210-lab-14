@@ -39,20 +39,56 @@ public:
     // Mutators / Setters
     void setRed(int r)
     {
-        if (r < MIN_RGB || r > MAX_RGB)
+        if (r < MIN_RGB)      // If the value is smaller than MIN_RGB
         {
+            r = MIN_RGB;      // Set it to the MIN_RGB value
+            red = r;          // Assign red = r
         }
-        red = r;          // Assign red = r
+        else if (r > MAX_RGB) // If the value is larger than MAX_RGB
+        {
+            r = MAX_RGB;      // Set it to the MAX_RGB value
+            red = r;          // Assign red = r
+        }
+        else                  // If the value is valid
+        {
+            red = r;          // Assign red = r
+        }
     }
 
     void setGreen(int g)
     {
-        green = g;        // Assign green = g
+        if (g < MIN_RGB)      // If the value is smaller than MIN_RGB
+        {
+            g = MIN_RGB;      // Set it to the MIN_RGB value
+            green = g;        // Assign green = g
+        }
+        else if (g > MAX_RGB) // If the value is larger than MAX_RGB
+        {
+            g = MAX_RGB;      // Set it to the MAX_RGB value
+            green = g;        // Assign green = g
+        }
+        else                  // If the value is valid
+        {
+            green = g;        // Assign green = g
+        }
     }
 
     void setBlue(int b)
     {
-        blue = b;         // Assign blue = b
+        if (b < MIN_RGB)      // If the value is smaller than MIN_RGB
+        {
+            b = MIN_RGB;      // Set it to the MIN_RGB value
+            blue = b;         // Assign blue = b
+        }
+        else if (b > MAX_RGB) // If the value is larger than MAX_RGB
+        {
+            b = MAX_RGB;      // Set it to the MAX_RGB value
+            blue = b;         // Assign blue = b
+        }
+        else                  // If the value is valid
+        {
+            blue = b;         // Assign blue = b
+        }
     }
 
     // Methods
