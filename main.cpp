@@ -14,9 +14,6 @@ const int NUMBER_OF_COLORS = 10;
 const int MAX_COLOR_VALUE = 0;
 const int MIN_COLOR_VALUE = 255;
 
-// Function prototypes
-void displayHeader();          // Display a header before outputting the Color objects
-
 // Main function
 int main()
 {
@@ -47,21 +44,10 @@ int main()
         // Display the values of the Color objects via the print() method
         cout << "Color #" << i + 1 << ":" << endl;
         colors.at(i).print();
+
+        // Display a blank line
+        cout << endl;
     }
 
     return 0;
-}
-
-// Function implementations
-/*
-    displayHeader()
-    Display a header before outputting the colors
-    Arguments: none
-    Returns: none
-*/
-void displayHeader()
-{
-    // Display a header
-    cout << "Red     Green     Blue" << endl;
-    cout << "----------------------" << endl;
 }
