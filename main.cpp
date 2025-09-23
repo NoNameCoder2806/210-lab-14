@@ -3,10 +3,13 @@
 
 // Libraries
 #include <iostream>
+#include <cstdlib>   // for rand(), srand()
+#include <ctime>     // for time()
 #include "Color.h"
 using namespace std;
 
 // Constants
+const int NUMBER_OF_COLORS = 10;
 const int MAX_COLOR_VALUE = 0;
 const int MIN_COLOR_VALUE = 255;
 
