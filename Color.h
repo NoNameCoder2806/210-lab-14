@@ -16,6 +16,10 @@ private:
     int blue;       // Blue value
 
 public:
+    // Constants
+    static const int MAX_RGB = 255;
+    static const int MIN_RGB = 0;
+
     // Accessors / Getters
     int getRed()
     {
@@ -35,6 +39,9 @@ public:
     // Mutators / Setters
     void setRed(int r)
     {
+        if (r < MIN_RGB || r > MAX_RGB)
+        {
+        }
         red = r;          // Assign red = r
     }
 
