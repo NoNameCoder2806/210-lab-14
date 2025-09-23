@@ -7,10 +7,11 @@
 using namespace std;
 
 // Constants
-
-// Restaurant struct
+const int MAX_COLOR_VALUE = 0;
+const int MIN_COLOR_VALUE = 255;
 
 // Function prototypes
+void displayHeader();      // Display a header before outputting the colors
 
 // Main function
 int main()
@@ -22,11 +23,17 @@ int main()
 
 // Function implementations
 /*
-    consoleInput()
-    Allows the user to enter information for a Restaurant struct.
+    displayHeader()
+    Display a header before outputting the colors
     Arguments: none
-    Returns: a Restaurant struct that contains the user's input
+    Returns: none
 */
+void displayHeader()
+{
+    // Display a header
+    cout << "Red     Green     Blue" << endl;
+    cout << "----------------------" << endl;
+}
 
 /*
     displayStruct()
