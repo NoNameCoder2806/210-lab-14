@@ -5,7 +5,61 @@
 
 // Libraries
 #include <iostream>
-#include <string>
 using namespace std;
 
 // Color class
+class Color
+{
+private:
+    int red;        // Red value
+    int green;      // Green value
+    int blue;       // Blue value
+
+public:
+    // Accessors / Getters
+    int getRed()
+    {
+        return red;        // Return the red value
+    }
+
+    int getGreen()
+    {
+        return green;      // Return the green value
+    }
+
+    int getBlue()
+    {
+        return blue;       // Return the blue value
+    }
+
+    // Mutators / Setters
+    void setRed(int r)
+    {
+        red = r;          // Assign red = r
+    }
+
+    void setGreen(int g)
+    {
+        green = g;        // Assign green = g
+    }
+
+    void setBlue(int b)
+    {
+        blue = b;         // Assign blue = b
+    }
+
+    // Methods
+    /*
+        print()
+        Display the Color's red, green, and blue values to the console
+        Arguments: none
+        Return: none
+    */
+    void print()
+    {
+        // Display the color values
+        cout << " - Red: " << getRed() << endl;          // Red
+        cout << " - Green: " << getGreen() << endl;      // Green
+        cout << " - Blue: " << getBlue() << endl;        // Blue
+    }
+};

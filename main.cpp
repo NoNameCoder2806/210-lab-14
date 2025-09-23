@@ -3,8 +3,7 @@
 
 // Libraries
 #include <iostream>
-#include <string>
-#include <iomanip>
+#include "Color.h"
 using namespace std;
 
 // Constants
