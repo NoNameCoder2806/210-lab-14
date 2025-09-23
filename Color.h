@@ -17,8 +17,8 @@ private:
 
 public:
     // Constants
-    static const int MAX_RGB = 255;
-    static const int MIN_RGB = 0;
+    static const int MAX_RGB = 255;      // Max RGB value
+    static const int MIN_RGB = 0;        // Min RGB value
 
     // Accessors / Getters
     int getRed()
