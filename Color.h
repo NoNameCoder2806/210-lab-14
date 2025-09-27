@@ -19,6 +19,7 @@ public:
     // Constants
     static const int MAX_RGB = 255;      // Max RGB value
     static const int MIN_RGB = 0;        // Min RGB value
+    static const int RGB_RANGE = 256;    // RGB value range
 
     // Accessors / Getters
     int getRed()
@@ -39,55 +40,55 @@ public:
     // Mutators / Setters
     void setRed(int r)
     {
-        if (r < MIN_RGB)      // If the value is smaller than MIN_RGB
+        if (r >= MIN_RGB && r <= MAX_RGB)       // If the value is in the valid range 0-255
         {
-            r = MIN_RGB;      // Set it to the MIN_RGB value
-            red = r;          // Assign red = r
+            red = r;                            // Assign red = r
         }
-        else if (r > MAX_RGB) // If the value is larger than MAX_RGB
+        else if (r < MIN_RGB)                   // If the value is smaller than MIN_RGB
         {
-            r = MAX_RGB;      // Set it to the MAX_RGB value
-            red = r;          // Assign red = r
+            r = (r % RGB_RANGE) + RGB_RANGE;    // Wrap negative numbers into the range 0-255
+            red = r;                            // Assign red = r
         }
-        else                  // If the value is valid
+        else                                    // If the value is larger than MAX_RGB
         {
-            red = r;          // Assign red = r
+            r = r % RGB_RANGE;                  // Wrap large positive numbers into the range 0–255
+            red = r;                            // Assign red = r
         }
     }
 
     void setGreen(int g)
     {
-        if (g < MIN_RGB)      // If the value is smaller than MIN_RGB
+        if (g >= MIN_RGB && g <= MAX_RGB)       // If the value is in the valid range 0-255
         {
-            g = MIN_RGB;      // Set it to the MIN_RGB value
-            green = g;        // Assign green = g
+            green = g;                          // Assign green = g
         }
-        else if (g > MAX_RGB) // If the value is larger than MAX_RGB
+        else if (g < MIN_RGB)                   // If the value is smaller than MIN_RGB
         {
-            g = MAX_RGB;      // Set it to the MAX_RGB value
-            green = g;        // Assign green = g
+            g = (g % RGB_RANGE) + RGB_RANGE;    // Wrap negative numbers into the range 0-255
+            green = g;                          // Assign green = g
         }
-        else                  // If the value is valid
+        else                                    // If the value is larger than MAX_RGB
         {
-            green = g;        // Assign green = g
+            g = g % RGB_RANGE;                  // Wrap large positive numbers into the range 0–255
+            green = g;                          // Assign green = g
         }
     }
 
     void setBlue(int b)
     {
-        if (b < MIN_RGB)      // If the value is smaller than MIN_RGB
+        if (b >= MIN_RGB && b <= MAX_RGB)       // If the value is in the valid range 0-255
         {
-            b = MIN_RGB;      // Set it to the MIN_RGB value
-            blue = b;         // Assign blue = b
+            blue = b;                           // Assign blue = b
         }
-        else if (b > MAX_RGB) // If the value is larger than MAX_RGB
+        else if (b < MIN_RGB)                   // If the value is smaller than MIN_RGB
         {
-            b = MAX_RGB;      // Set it to the MAX_RGB value
-            blue = b;         // Assign blue = b
+            b = (b % RGB_RANGE) + RGB_RANGE;    // Wrap negative numbers into the range 0-255
+            blue = b;                           // Assign blue = b
         }
-        else                  // If the value is valid
+        else                                    // If the value is larger than MAX_RGB
         {
-            blue = b;         // Assign blue = b
+            b = b % RGB_RANGE;                  // Wrap large positive numbers into the range 0–255
+            blue = b;                           // Assign blue = b
         }
     }
 
