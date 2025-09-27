@@ -36,6 +36,13 @@ int main()
         colors.push_back(temp);
     }
 
+    // Create a Color object to test the out of range values
+    Color color1;              // Create a Color objectobject
+    color1.setRed(455);        // Set the red value
+    color1.setGreen(-360);     // Set the green value
+    color1.setBlue(125);       // Set the blue value
+    colors.push_back(color1);  // Add the Color object to the vector
+
     // Iterate through the vector and display all the Color objects
     for (int i = 0; i < colors.size(); i++)
     {
