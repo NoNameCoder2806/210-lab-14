@@ -92,7 +92,7 @@ public:
         }
     }
 
-    // Methods
+    // Member functions
     /*
         print()
         Display the Color's red, green, and blue values to the console
